@@ -243,3 +243,19 @@ def seed(s):
         raise argparse.ArgumentTypeError(
             "Integer value is expected. Recieved {0}".format(s)
         )
+
+import os
+def get_data(args, dataset, split='train'):
+    alignment = 'a' if args.aligned else 'na'
+  #  data_path = os.path.join(args.data_path, dataset) + f'_{split}_{alignment}.dt'
+    data_path = os.path.join(args.data_path, dataset) + '_{}_{}.dt'.format(split,alignment)
+    if not os.path.exists(data_path):
+      #  print(f"  - Creating new {split} data")
+        print("  - Creating new {} data".format(split))
+        data = Multimodal_Datasets(args.data_path, dataset, split, args.aligned)
+        torch.save(data, data_path)
+    else:
+      #  print(f"  - Found cached {split} data")
+        print("  - Found cached {} data".format(split))
+        data = torch.load(data_path)
+    return data

@@ -13,7 +13,7 @@ def set_random_seed(seed: int):
         seed (int): integer to be used as seed, use -1 to randomly seed experiment
     """
    # seed = 9388
-    seed = 5576
+    seed = 3407
     # print("Seed: {}".format(seed))
 
     torch.backends.cudnn.benchmark = False
@@ -28,11 +28,11 @@ def set_random_seed(seed: int):
     torch.cuda.manual_seed_all(seed)
 
 
-def mkdirs(checkpoint_path, best_model_path, logs):
-    if not os.path.exists(checkpoint_path):
-        os.makedirs(checkpoint_path)
-    if not os.path.exists(best_model_path):
-        os.makedirs(best_model_path)
+def mkdirs(logs):
+    # if not os.path.exists(checkpoint_path):
+    #     os.makedirs(checkpoint_path)
+    # if not os.path.exists(best_model_path):
+    #     os.makedirs(best_model_path)
     if not os.path.exists(logs):
         os.makedirs(logs)
 
