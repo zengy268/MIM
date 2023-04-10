@@ -1,5 +1,12 @@
 # Multimodal Information Modulation
-Open source code for paper: Multimodal Reaction: Information Modulation for Cross-modal Representation Learning
+This is the open source code for paper: Multimodal Reaction: Information Modulation for Cross-modal Representation Learning
+
+## Table of Contents
+- [Description](#Description)
+- Getting started
+- Running
+
+# Description
 
 # Getting Started
 ## Data Preparation
