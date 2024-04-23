@@ -10,7 +10,7 @@ This is the open source code for paper: Multimodal Reaction: Information Modulat
 This is the open source code for paper: Multimodal Reaction: Information Modulation for Cross-modal Representation Learning. We have provided the implementation on the task of multimodal sentiment analysis. The main components are as follow:
 1. `./datasets` contains the datasets used in the experiments
 2. `./modules` contains the model definition
-3. `./utils` contains the functions for data processing, evaluation metrics, etc.
+3. `./utils` contains the functions for data processing, evaluation metrics, etc. **The file ./utils/loss.py will be updated in May, 2024.**
 4. `global_configs.py` defines important constants
 5. `train.py` defines the training process
 
